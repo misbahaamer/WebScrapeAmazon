@@ -28,6 +28,9 @@ namespace MyTest
     {
         static MyTestRepository instance = new MyTestRepository();
         MyTestRepositoryFolders.ApplicationUnderTestAppFolder _applicationundertest;
+        MyTestRepositoryFolders.ExplorerAppFolder _explorer;
+        MyTestRepositoryFolders.CortanaAppFolder _cortana;
+        MyTestRepositoryFolders.CalculatorAppFolder _calculator;
 
         /// <summary>
         /// Gets the singleton class instance representing the MyTestRepository element repository.
@@ -45,6 +48,9 @@ namespace MyTest
             : base("MyTestRepository", "/", null, 0, false, "1f5d9fe7-0166-4043-9df5-2692d611ebe3", ".\\RepositoryImages\\MyTestRepository1f5d9fe7.rximgres")
         {
             _applicationundertest = new MyTestRepositoryFolders.ApplicationUnderTestAppFolder(this);
+            _explorer = new MyTestRepositoryFolders.ExplorerAppFolder(this);
+            _cortana = new MyTestRepositoryFolders.CortanaAppFolder(this);
+            _calculator = new MyTestRepositoryFolders.CalculatorAppFolder(this);
         }
 
 #region Variables
@@ -70,6 +76,33 @@ namespace MyTest
         public virtual MyTestRepositoryFolders.ApplicationUnderTestAppFolder ApplicationUnderTest
         {
             get { return _applicationundertest; }
+        }
+
+        /// <summary>
+        /// The Explorer folder.
+        /// </summary>
+        [RepositoryFolder("c6933ce8-6ce7-4642-b2c7-3a8f7e419c09")]
+        public virtual MyTestRepositoryFolders.ExplorerAppFolder Explorer
+        {
+            get { return _explorer; }
+        }
+
+        /// <summary>
+        /// The Cortana folder.
+        /// </summary>
+        [RepositoryFolder("56cb03c6-4943-4b59-887d-84fff19d58ae")]
+        public virtual MyTestRepositoryFolders.CortanaAppFolder Cortana
+        {
+            get { return _cortana; }
+        }
+
+        /// <summary>
+        /// The Calculator folder.
+        /// </summary>
+        [RepositoryFolder("9f610727-e33f-496c-a5ba-87694fc55520")]
+        public virtual MyTestRepositoryFolders.CalculatorAppFolder Calculator
+        {
+            get { return _calculator; }
         }
     }
 
@@ -296,6 +329,282 @@ namespace MyTest
                 get
                 {
                     return _txtusernameInfo;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The ExplorerAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("c6933ce8-6ce7-4642-b2c7-3a8f7e419c09")]
+        public partial class ExplorerAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _text4101Info;
+
+            /// <summary>
+            /// Creates a new Explorer  folder.
+            /// </summary>
+            public ExplorerAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Explorer", "/menubar[@processname='explorer']", parentFolder, 30000, null, true, "c6933ce8-6ce7-4642-b2c7-3a8f7e419c09", "")
+            {
+                _text4101Info = new RepoItemInfo(this, "Text4101", "?/?/text[@controlid='4101']", 30000, null, "c685b377-eacc-4c17-9b37-2365d2163656");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("c6933ce8-6ce7-4642-b2c7-3a8f7e419c09")]
+            public virtual Ranorex.MenuBar Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.MenuBar>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("c6933ce8-6ce7-4642-b2c7-3a8f7e419c09")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Text4101 item.
+            /// </summary>
+            [RepositoryItem("c685b377-eacc-4c17-9b37-2365d2163656")]
+            public virtual Ranorex.Text Text4101
+            {
+                get
+                {
+                    return _text4101Info.CreateAdapter<Ranorex.Text>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Text4101 item info.
+            /// </summary>
+            [RepositoryItemInfo("c685b377-eacc-4c17-9b37-2365d2163656")]
+            public virtual RepoItemInfo Text4101Info
+            {
+                get
+                {
+                    return _text4101Info;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The CortanaAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("56cb03c6-4943-4b59-887d-84fff19d58ae")]
+        public partial class CortanaAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _id107Info;
+
+            /// <summary>
+            /// Creates a new Cortana  folder.
+            /// </summary>
+            public CortanaAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Cortana", "/winapp[@packagename='Microsoft.Windows.Cortana']", parentFolder, 30000, null, true, "56cb03c6-4943-4b59-887d-84fff19d58ae", "")
+            {
+                _id107Info = new RepoItemInfo(this, "Id107", ".//list[@automationid='suggestionsList']/listitem[@automationid='id_107']", 30000, null, "5199f020-61c8-4254-84d7-4f1d671e847f");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("56cb03c6-4943-4b59-887d-84fff19d58ae")]
+            public virtual Ranorex.WindowsApp Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.WindowsApp>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("56cb03c6-4943-4b59-887d-84fff19d58ae")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Id107 item.
+            /// </summary>
+            [RepositoryItem("5199f020-61c8-4254-84d7-4f1d671e847f")]
+            public virtual Ranorex.ListItem Id107
+            {
+                get
+                {
+                    return _id107Info.CreateAdapter<Ranorex.ListItem>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Id107 item info.
+            /// </summary>
+            [RepositoryItemInfo("5199f020-61c8-4254-84d7-4f1d671e847f")]
+            public virtual RepoItemInfo Id107Info
+            {
+                get
+                {
+                    return _id107Info;
+                }
+            }
+        }
+
+        /// <summary>
+        /// The CalculatorAppFolder folder.
+        /// </summary>
+        [RepositoryFolder("9f610727-e33f-496c-a5ba-87694fc55520")]
+        public partial class CalculatorAppFolder : RepoGenBaseFolder
+        {
+            RepoItemInfo _num8buttonInfo;
+            RepoItemInfo _multiplybuttonInfo;
+            RepoItemInfo _equalbuttonInfo;
+            RepoItemInfo _closeInfo;
+
+            /// <summary>
+            /// Creates a new Calculator  folder.
+            /// </summary>
+            public CalculatorAppFolder(RepoGenBaseFolder parentFolder) :
+                    base("Calculator", "/winapp[@packagename='Microsoft.WindowsCalculator']", parentFolder, 30000, null, true, "9f610727-e33f-496c-a5ba-87694fc55520", "")
+            {
+                _num8buttonInfo = new RepoItemInfo(this, "Num8Button", "?/?/container[@automationid='NumberPad']/button[@automationid='num8Button']", 30000, null, "a4c6784f-3763-4ab0-98ae-c4048f8f312c");
+                _multiplybuttonInfo = new RepoItemInfo(this, "MultiplyButton", "?/?/container[@automationid='StandardOperators']/button[@automationid='multiplyButton']", 30000, null, "b9f60cb2-661f-407f-8b47-f4a932cc3968");
+                _equalbuttonInfo = new RepoItemInfo(this, "EqualButton", "?/?/container[@automationid='StandardOperators']/button[@automationid='equalButton']", 30000, null, "f93275ff-fc4b-48d2-b78b-fd21567b411d");
+                _closeInfo = new RepoItemInfo(this, "Close", "?/?/button[@automationid='Close']", 30000, null, "ce0bdfcc-1d8b-44aa-aff7-0139fb107d37");
+            }
+
+            /// <summary>
+            /// The Self item.
+            /// </summary>
+            [RepositoryItem("9f610727-e33f-496c-a5ba-87694fc55520")]
+            public virtual Ranorex.WindowsApp Self
+            {
+                get
+                {
+                    return _selfInfo.CreateAdapter<Ranorex.WindowsApp>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Self item info.
+            /// </summary>
+            [RepositoryItemInfo("9f610727-e33f-496c-a5ba-87694fc55520")]
+            public virtual RepoItemInfo SelfInfo
+            {
+                get
+                {
+                    return _selfInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Num8Button item.
+            /// </summary>
+            [RepositoryItem("a4c6784f-3763-4ab0-98ae-c4048f8f312c")]
+            public virtual Ranorex.Button Num8Button
+            {
+                get
+                {
+                    return _num8buttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Num8Button item info.
+            /// </summary>
+            [RepositoryItemInfo("a4c6784f-3763-4ab0-98ae-c4048f8f312c")]
+            public virtual RepoItemInfo Num8ButtonInfo
+            {
+                get
+                {
+                    return _num8buttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The MultiplyButton item.
+            /// </summary>
+            [RepositoryItem("b9f60cb2-661f-407f-8b47-f4a932cc3968")]
+            public virtual Ranorex.Button MultiplyButton
+            {
+                get
+                {
+                    return _multiplybuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The MultiplyButton item info.
+            /// </summary>
+            [RepositoryItemInfo("b9f60cb2-661f-407f-8b47-f4a932cc3968")]
+            public virtual RepoItemInfo MultiplyButtonInfo
+            {
+                get
+                {
+                    return _multiplybuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EqualButton item.
+            /// </summary>
+            [RepositoryItem("f93275ff-fc4b-48d2-b78b-fd21567b411d")]
+            public virtual Ranorex.Button EqualButton
+            {
+                get
+                {
+                    return _equalbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EqualButton item info.
+            /// </summary>
+            [RepositoryItemInfo("f93275ff-fc4b-48d2-b78b-fd21567b411d")]
+            public virtual RepoItemInfo EqualButtonInfo
+            {
+                get
+                {
+                    return _equalbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Close item.
+            /// </summary>
+            [RepositoryItem("ce0bdfcc-1d8b-44aa-aff7-0139fb107d37")]
+            public virtual Ranorex.Button Close
+            {
+                get
+                {
+                    return _closeInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Close item info.
+            /// </summary>
+            [RepositoryItemInfo("ce0bdfcc-1d8b-44aa-aff7-0139fb107d37")]
+            public virtual RepoItemInfo CloseInfo
+            {
+                get
+                {
+                    return _closeInfo;
                 }
             }
         }

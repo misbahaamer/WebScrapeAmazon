@@ -164,6 +164,18 @@
       <UserCode>true</UserCode>
       <id>045a1023-686d-4070-8651-d364971b8557</id>
     </Compile>
+    <Compile Include="Recording3.cs">
+      <BoundTo>1b012c47-e044-4350-96df-7315bcdaa947</BoundTo>
+      <DependentUpon>Recording3.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c93e12e3-07e3-4086-bf26-14dcb0be9aa5</id>
+    </Compile>
+    <Compile Include="Recording3.UserCode.cs">
+      <BoundTo>1b012c47-e044-4350-96df-7315bcdaa947</BoundTo>
+      <DependentUpon>Recording3.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a0f9cd3f-c87d-41a9-912d-062658b647b4</id>
+    </Compile>
     <Compile Include="ReportToPDF_7.X.cs">
       <id>817406eb-6a3b-489e-985c-f1ffa1b2ade3</id>
     </Compile>
@@ -209,6 +221,11 @@
       <BoundTo>803b1eca-4387-4a2b-b159-002698eb89e8</BoundTo>
       <id>2b794d99-086c-4906-95a7-005b32b556ca</id>
       <recordtableid>c437364e-523d-4696-83d7-9ddcd119e0d6</recordtableid>
+    </None>
+    <None Include="Recording3.rxrec">
+      <BoundTo>803b1eca-4387-4a2b-b159-002698eb89e8</BoundTo>
+      <id>1b012c47-e044-4350-96df-7315bcdaa947</id>
+      <recordtableid>a0d6210e-b2e3-4b05-afd4-b027c81476dd</recordtableid>
     </None>
     <None Include="StartAUT.rxrec">
       <BoundTo>803b1eca-4387-4a2b-b159-002698eb89e8</BoundTo>

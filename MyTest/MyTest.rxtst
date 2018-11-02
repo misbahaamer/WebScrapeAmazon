@@ -22,12 +22,6 @@ rxversion="8.3">
 			ref="69c0dd2e-fd1f-4ebe-a51c-75e144c0bfee"
 			type="Recording">
 			</testmodule>
-			<testmodule
-			id="76f943fa-8ccb-4aab-a340-47ccc23b23a2"
-			name="ReportToPDF"
-			ref="ffa0759d-37d2-4abb-89a7-411f0fcf2dfe"
-			type="UserCode">
-			</testmodule>
 			<testcase
 			id="86604497-f9ec-4ca3-8dc5-9bfb6c6d782d"
 			name="TestCase">
@@ -36,6 +30,12 @@ rxversion="8.3">
 			id="b2fded40-2a5f-4798-9cc6-42f4cee18df4"
 			name="Recording1"
 			ref="b3d42cfb-6f6b-44ca-85bb-f54e4b3e696d"
+			type="Recording">
+			</testmodule>
+			<testmodule
+			id="bdaabae1-ddc2-4226-bc15-6df695398986"
+			name="Recording3"
+			ref="a0d6210e-b2e3-4b05-afd4-b027c81476dd"
 			type="Recording">
 			</testmodule>
 			<testmodule
@@ -58,6 +58,12 @@ rxversion="8.3">
 			reportwriteinterval="30000ms"
 			showinvisiblechars="True">
 			</testsuite>
+			<testmodule
+			id="fb8a305e-9568-4378-ab08-b4b1e5f961fe"
+			name="ReportToPDF"
+			ref="ffa0759d-37d2-4abb-89a7-411f0fcf2dfe"
+			type="UserCode">
+			</testmodule>
 		</flatlistofchildren>
 		<childhierarchy>
 			<testsuite
@@ -76,6 +82,10 @@ rxversion="8.3">
 							id="beb3bfc8-139c-43e8-be63-ce23f6f626c8"
 							name="StartAUT">
 							</testmodule>
+							<testmodule
+							id="bdaabae1-ddc2-4226-bc15-6df695398986"
+							name="Recording3">
+							</testmodule>
 						</setup>
 						<testmodule
 						id="b2fded40-2a5f-4798-9cc6-42f4cee18df4"
@@ -89,7 +99,7 @@ rxversion="8.3">
 							name="CloseAUT">
 							</testmodule>
 							<testmodule
-							id="76f943fa-8ccb-4aab-a340-47ccc23b23a2"
+							id="fb8a305e-9568-4378-ab08-b4b1e5f961fe"
 							name="ReportToPDF">
 							</testmodule>
 						</teardown>
